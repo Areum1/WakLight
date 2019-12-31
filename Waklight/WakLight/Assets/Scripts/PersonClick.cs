@@ -8,10 +8,12 @@ public class PersonClick : MonoBehaviour
     float MaxDistance = 15f;
     Vector3 MousePosition;
     Camera Camera;
+    public Image imgHpBar;
 
     void Start()
     {
         Camera = GetComponent<Camera>();
+        imgHpBar.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,7 +22,6 @@ public class PersonClick : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("실행중");
             MousePosition = Input.mousePosition;
             MousePosition = Camera.ScreenToWorldPoint(MousePosition);
 
@@ -28,8 +29,8 @@ public class PersonClick : MonoBehaviour
             Debug.DrawRay(MousePosition, transform.forward * 10, Color.red, 0.3f);
             if (hit)
             {
-                Debug.Log("hit침");
                 hit.transform.GetComponent<SpriteRenderer>().color = Color.red;
+                imgHpBar.gameObject.SetActive(true);
             }
         }
     }

@@ -13,7 +13,6 @@ public class ChangeImage : MonoBehaviour
     void Start()
     {
         pos = this.gameObject.transform.position;
-        Debug.Log(pos);
         m_Image = GetComponent<Image>();
     }
 

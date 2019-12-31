@@ -64,7 +64,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChangeImage.cs" />
     <Compile Include="Assets\Scripts\CharacterMove.cs" />
+    <Compile Include="Assets\Scripts\HeartDirector.cs" />
     <Compile Include="Assets\Scripts\PersonClick.cs" />
+    <Compile Include="Assets\Scripts\WokGenerator.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/지우지마/2학년/과제/유니티/Waklight/WakLight/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
